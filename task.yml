@@ -1,0 +1,8 @@
+--- # This is my second Playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+        - name: Install HTTPD on centos 
+          action: yum name=httpd state=absent

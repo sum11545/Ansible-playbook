@@ -1,0 +1,10 @@
+--- # this is my varibale file for testing
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+       pkgname: httpd
+  tasks:
+        - name: install HTTPD server on centos 
+          action: yum name="{{pkgname}}" state=installed

@@ -1,0 +1,12 @@
+--- #this is my condintal playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+         - name: installed apache on debain node
+           command: apt-get -y install apache2
+           when: ansible_os_family == "debian"
+         - name: installed HTTPD on redhat
+           command: yum -y install httpd
+           when: ansible_os_family == "RedHat"

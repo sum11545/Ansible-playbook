@@ -1,0 +1,7 @@
+--- #this is master playbook
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  roles:
+        - webserver

@@ -1,0 +1,13 @@
+--- #this my loops playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+        - name: THIS IS LOOP PLAYBOOK IN CENTOS 
+          user: name='{{item}}' state=present
+          with_items:
+             - sumit
+             - raju
+             - abhishek
+             - MARK 

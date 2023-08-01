@@ -1,0 +1,3 @@
+- name: install apache on redhat os 
+  yum: pkg=httpd state=latest
+
